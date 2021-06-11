@@ -1,0 +1,5 @@
+import random
+a=random.randint(1,10)随机生成1到10的整数（闭区间）
+
+type()判断数据类型
+isinstance(a,int)判断a是否为int型，返回True或者False.
