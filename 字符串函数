@@ -1,6 +1,8 @@
 capitalize()              #第一个字符改为大写
 casefold()                #所有字符改为小写
-center(x)                 #用空格使字符串长度变为x,且字符串居中.
+center(width)             #用空格使字符串长度变为x,且字符串居中.
+ljust(width)              #用空格使字符串长度变为width且左对齐.
+rjust(width)              #如上.
 count(a)                  #统计字符串a出现次数,有范围参数.
 endswith(a)               #检查是否以字符串a结尾,有范围参数,返回Ture或False.
 a='s\tsssss\t'
@@ -8,7 +10,9 @@ a.expandtabs(tabsize=3)   #将tab键(\t)换为空格,参数为x(不写参数默�
 's  sssss '               #从前一个tab键(\t)或开头开始,空格数加上字符串模参数的值等于参数.
                           #开头1个s所以2个空格,5个s模3等于2,所以只有1个空格.
 find(a)                   #查找a是否存在该字符串,存在返回第一个字符下标,否则-1,有范围参数.
+rfind(a)                  #从右开始查找,有范围参数.
 index(a)                  #与find一致,但a不存在时程序异常.
+rindex(a)                 #类似rfind.
 isalnum()                 #全是字母或数字返回True.
 isalpha()                 #全是字母返回True.
 isdecimal()               #全为10进制数字返回True.
@@ -18,3 +22,10 @@ isnumeric()               #全为数字字符返回True.
 isspace()                 #全空格返回True.
 istitle()                 #标题化(每个单词首字母大写其余小写)返回True.
 isupper()                 #全大写True.
+join(a)                   #以字符串a作为分隔符插入每个字符之间.
+lower()                   #大写变为小写.
+lstrip()                  #去掉左空格.
+rstrip()                  #去掉右空格.
+partition(a)              #以a字符串作为分隔分成3个元组,a之前字符串,a字符串,a之后字符串.
+rpartition(a)             #从右开始.
+replace(ole,new,c)        #将old字符串替换为new且最多c次替换.
