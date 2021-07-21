@@ -5,6 +5,7 @@ ljust(width)              #用空格使字符串长度变为width且左对齐.
 rjust(width)              #如上.
 count(a)                  #统计字符串a出现次数,有范围参数.
 endswith(a)               #检查是否以字符串a结尾,有范围参数,返回Ture或False.
+startswith(a)             #判断是否以字符串a开头,返回T或F,有范围参数.
 a='s\tsssss\t'
 a.expandtabs(tabsize=3)   #将tab键(\t)换为空格,参数为x(不写参数默认为8),
 's  sssss '               #从前一个tab键(\t)或开头开始,空格数加上字符串模参数的值等于参数.
@@ -24,8 +25,19 @@ istitle()                 #标题化(每个单词首字母大写其余小写)返
 isupper()                 #全大写True.
 join(a)                   #以字符串a作为分隔符插入每个字符之间.
 lower()                   #大写变为小写.
+upper()                   #小写变大写.
 lstrip()                  #去掉左空格.
 rstrip()                  #去掉右空格.
+strip('a')                #删除两边的字符a,不包括中间.无参数默认空格.
 partition(a)              #以a字符串作为分隔分成3个元组,a之前字符串,a字符串,a之后字符串.
 rpartition(a)             #从右开始.
 replace(ole,new,c)        #将old字符串替换为new且最多c次替换.
+
+split('a')          #以字符a作为分隔符,每次分隔出的作为一个元素,形成列表.没有参数默认空格.
+splitlines()        #以'\n'作为分隔符.
+swapcase()          #大小写互换.
+title()             #返回标题化的字符串.
+a='sssss'           
+a.translate(str.maketrans('s','b'))
+a='bbbbb'           #将某个字符换为指定字符.
+zfill(width)        #变为长度width的字符,右对齐,前面用0填满.
