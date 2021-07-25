@@ -5,6 +5,7 @@ TAB根据已有字符推测你要选择的函数
 help()函数名可以得到函数的解释
 CTRL+J       #不会出现>>>的换行
 CTRL+ENTER   #出现>>>的换行
+CTRL+C       #强制停止程序.
 
 True代表1，False代表0.True+True输出2.
 但是非0也表示真。
