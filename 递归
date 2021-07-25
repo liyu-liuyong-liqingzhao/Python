@@ -1,0 +1,2 @@
+>>>import sys
+>>>sys.setrecursionlimit(x)     #设置x为最大递归层数.
