@@ -57,3 +57,9 @@ ismount(path)            #判断是否存在且为一个挂载点.
 #'C:\\'为挂载点,'C:\\A'不是挂载点.
 samefile(p1,p2)          #判断两个路径是否指向同一个文件.
 
+import pickle
+file=open('fff.pkl','wb')    #wb:二进制写入
+pickle.dump(list,file)       #将列表储存到文件中去.
+file1=open('fff.pkl','rb')   #rb:二进制只读
+list1=pickle.load(file1)     #将文件内容读取到列表中去.
+file.close()
