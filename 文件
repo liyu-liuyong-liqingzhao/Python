@@ -67,16 +67,21 @@ file.close()
 try:
     int('abc')
     sum=1+'1'
-except ValueError as reason:     #只有当错误是该类型时才会执行except.
+except ValueError as reason:         #只有当错误是该类型时才会执行except.
     print('错误:'+str(reason))
 except TypeError as reason:
-    print('错误:'+str(reason))    #当有多个except时,try碰到第一个错误后,
-                                 #执行对应的except,不会再执行后面的except.
-except (ValueError,TypeError):   #多个错误使用元组.
+    print('错误:'+str(reason))       #当有多个except时,try碰到第一个错误后,
+                                     #执行对应的except,不会再执行后面的except.
+except (ValueError,TypeError):       #多个错误使用元组.
 except:
-    print('出错')                 #无法判断类型时可以不写,但这种写法会导致
-                                 #无法使用CTRL+C来强制终止程序.
-finally:                         #不管出现什么错误都会执行的部分.
-    file.close()                 #当打开文件后,若出现错误,则直接进入except,
-                                 #不会执行最后的close,所以把close写到finally.
-raise TypeError('类型错误')       #引发某类型错误,括号进行解释.
+    print('出错')                    #无法判断类型时可以不写,但这种写法会导致
+                                     #无法使用CTRL+C来强制终止程序.
+finally:                             #不管出现什么错误都会执行的部分.
+    file.close()                     #当打开文件后,若出现错误,则直接进入except,
+                                     #不会执行最后的close,所以把close写到finally.
+try:
+    with open('fff.txt','w') as f:   #with可以自动关闭文件,所以当try部分出错时不需要使用finally.
+        print()
+except OSError as reason:
+    print(str(reason))
+raise TypeError('类型错误')           #引发某类型错误,括号进行解释.
