@@ -1,0 +1,49 @@
+图形用户界面:GUI:Graphical User Interface
+面向对象:OO:Object Oriented
+class c1:
+    def sum(self,a,b):
+        self.a=a
+        self.b=b
+    def getsum(self):
+        return self.a+self.b
+A=c1()
+A.sum(10,20)
+print(A.getsum())
+class c1:
+    def __init__(self,a,b):   #__init__可以带参数直接初始化.
+        self.a=a
+        self.b=b
+    def getsum(self):
+        return self.a+self.b
+A=c1(10,20)
+print(A.getsum())
+
+class c2:
+    __v1='skt'                #变量前加双下划线使其私有.
+    def get(self):
+        return self.__v1
+B=c2()          
+B.__v1                        #无法从外部访问该变量.
+B.get()                       #从内部才能访问.
+B._c2__v1                     #单下划线加类名再加变量也可以访问.
+
+class List(list):             #表示List继承了list的数据和方法,
+    pass                      #即List可以使用list内置函数.
+#当子类定义与父类同名的方法或属性则在子类中会覆盖父类的方法或属性
+class parent:
+    def p(self):
+        print('A')
+class child(parent):
+    def p(self):
+        print('B')            #会打印B
+class child(parent):
+    def p(self):
+        parent.p(self)        #将父类方法重新传入子类.
+        print('B')            #打印A,B
+parent.p(child)               #也可以在函数外部直接将子类作为参数传入.
+class child(parent):
+    def p(self):
+        super().p()           #super不需要传参,会自动找到对应的函数.
+        print('B')
+
+class a(base1,base2)          #可以同时继承多个父类.
