@@ -18,3 +18,15 @@ d3=d1
 del d3                 #不会打印,因为还有其他两个引用.
 del d2                 #不会打印,还有一个引用.
 del d1                 #打印ddd,没有其他引用了.
+
+class describe:           #描述符是一个类,定义其他类中属性的访问方式.
+    def __get__(self,instance,owner):
+        print('get')
+    def __set__(self,instance,owner):
+        print('set')
+    def __delete__(self,instance,owner):
+        print('delete')
+class other:
+    a=describe()
+x=other()
+#self指描述符的对象a,instance指其他类的对象x,owner指其他类other.
