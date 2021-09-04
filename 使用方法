@@ -9,8 +9,9 @@ CTRL+C       #强制停止程序.
 CTRL+[       #选中多行向左缩进,]则向右.
 CTRL+/       #把当前行代码变成注释
 
-True代表1，False代表0.True+True输出2.
-但是非0也表示真。
+True代表1，False代表0.True+True输出2，但是非0也表示真。
+a and b      #若a,b都非0则返回最后那个数字,否则返回0.
+a or b       #返回第一个非0数字,除非都为0.
 
 将str,int等作为变量名时不会出错，但是再使用str和int时只会作为变量名，失去原有作用。
 
@@ -21,3 +22,7 @@ x,y=1,2
 import导入模块，类似c语言include。
 from file import *        #导入模块中所有函数.
 import file as new        #重新给模块命名
+
+input    #接收的数据类型是str.
+a='sss'
+print(f'My name is {a}')  #不同的输出格式
