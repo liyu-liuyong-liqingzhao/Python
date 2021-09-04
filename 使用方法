@@ -7,6 +7,7 @@ CTRL+J       #不会出现>>>的换行
 CTRL+ENTER   #出现>>>的换行
 CTRL+C       #强制停止程序.
 CTRL+[       #选中多行向左缩进,]则向右.
+CTRL+/       #把当前行代码变成注释
 
 True代表1，False代表0.True+True输出2.
 但是非0也表示真。
