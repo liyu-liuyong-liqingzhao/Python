@@ -30,3 +30,7 @@ class other:
     a=describe()
 x=other()
 #self指描述符的对象a,instance指其他类的对象x,owner指其他类other.
+
+#为了方便测试程序,会有一个测试函数,但又不能在程序正常运行时使用测试函数.
+if __name__=="__main__":     #当模块作为主程序时才会运行test,
+    test()                   #而作为模块被其他程序导入时就不会调用test.
