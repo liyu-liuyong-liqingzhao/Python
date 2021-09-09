@@ -1,0 +1,5 @@
+import urllib.request        #访问网页
+web=urllib.request.urlopen("http://www.baidu.com")
+f=web.read()
+print(f)                     #打印二进制字符串
+f=f.decode("utf-8")          #以某种形式解码
