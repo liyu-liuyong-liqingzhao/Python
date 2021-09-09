@@ -1,0 +1,7 @@
+while 条件:        #for循环中else用法和while一样
+    循环体
+        break      #非正常结束,不运行else
+    循环体
+        continue   #正常结束,运行else
+else:
+    循环正常结束后运行的代码
